@@ -1,9 +1,15 @@
 (function(){
+	
+	function loginCtrlFn($scope){
+		$scope.user={
+			
+		}
+		$scope.submit=function(){
+			console.log($scope.user);
+			return $scope.user;
+		}
+	}
 	angular.module("login")
-	.config(function(){
-		console.log("i am the login module config() method..");
-	})
-	.run(function(){
-		console.log("i am the login module run() method..");
-	});
+	.controller("loginCtrl",["$scope",loginCtrlFn])
+	
 })();

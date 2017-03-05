@@ -8,6 +8,7 @@
 		
 		vm.register=function(){
 			console.log(vm.user);
+			return vm.user;
 		}
 		
 	}
