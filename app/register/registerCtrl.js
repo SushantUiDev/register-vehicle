@@ -1,9 +1,17 @@
 (function(){
+	
+	function registerCtrlFn(){
+		var vm=this;
+		vm.user={
+		
+		}
+		
+		vm.register=function(){
+			console.log(vm.user);
+		}
+		
+	}
+	
 	angular.module("register")
-	.config(function(){
-		console.log("i am register module config() method..");
-	})
-	.run(function(){
-		console.log("i am register module run() method ..");
-	});
+	.controller("registerCtrl",[registerCtrlFn]);
 })();
