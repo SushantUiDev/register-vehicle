@@ -1,4 +1,4 @@
-<form ng-controller="registerCtrl as rc">
+<form ng-controller="registerCtrl as rc" style="background-color:black;font-size:20px;color:white;border-radius:10px;padding:10px;">
 	<div class="form-group">
 		<label for="email">Email address</label>
 		<input type="email" class="form-control" id="email" ng-model="rc.user.email" aria-describedby="emailHelp" placeholder="Enter email">
@@ -7,6 +7,13 @@
 	<div class="form-group">
 		<label for="password">Password</label>
 		<input type="password" class="form-control" ng-model="rc.user.password" name="password" id="password" placeholder="Password">
+	</div>
+	
+	<div class="form-group">
+		<label for="country">Select Country</label>
+		<select class="form-control" ng-options="country.name for  country in rc.countries" ng-model="rc.user.selectedCountry" placeholder="Select Country">
+			<option value="">Please Select Country</option>
+		</select>{{rc.user.selectedCountry}}
 	</div>
 
 	
@@ -47,6 +54,6 @@
       <input type="checkbox" name="term" id="term" ng-model="rc.user.term" class="form-check-input">
       Check me out
     </label>
-	</div>
-	<button type="submit" ng-click="rc.register()" class="btn btn-primary">Register</button> {{rc.user}}
+	</div><center></center>
+	<button type="submit" ng-click="rc.register()" class="btn btn-primary">Register</button></center> {{rc.user}}
 </form>

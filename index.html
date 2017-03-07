@@ -2,6 +2,7 @@
 
 <head>
 	<title>Vehicle Registration</title>
+	<!--<link href="app/css/body.css"></link>--(how to apply our own css in ajs)-->
 	<script src="http://mymaplist.com/js/vendor/TweenLite.min.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/cyborg/bootstrap.min.css">
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"></link>
@@ -10,14 +11,17 @@
 	<script src="bower_components/angular/angular.js"></script>
 </head>
 
-<body>
+<body style="background-color:blue">
 	<div class="container">
 		<div ng-controller="headerCtrl as hc" ng-include="'app/header/header.tpl.html'">
 
 		</div>
 
 	</div>
-
+    <!-- commom file -->
+	<script src="app/common/common.js"></script>
+	<script src="app/common/lookupService.js"></script>
+	
 	<!-- header files -->
 	<script src="app/header/header.js"></script>
 	<script src="app/header/headerCtrl.js"></script>
