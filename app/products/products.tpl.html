@@ -1,0 +1,14 @@
+<div ng-controller="productCtrl as pc" >
+	<div class="row" ng-repeat="item in pc.products">
+		<div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img src="../images/{{item.image}}" alt="Sample Image">
+				<div class="caption">
+					<h3>{{item.Model|uppercase}}</h3>
+					<p>{{item.Description |limitTo:pc.minimumCharactar}}</p>
+					<p><a href="#" class="btn btn-primary" role="button">{{item.Price}}</a> <a href="#" class="btn btn-default" role="button">BUY</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

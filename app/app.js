@@ -1,6 +1,6 @@
 (function () {
 	//module creation
-	angular.module("goodServices", ["header","login","register","common"]);
+	angular.module("goodServices", ["header","login","register","common","product"]);
 
 	angular.module("goodServices")
 		.config(function () {

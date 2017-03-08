@@ -3,9 +3,10 @@
 	function headerCtrlFn() {
 		var vm = this;
 		vm.brandName = "GoodServices";
-		vm.navItems = ["login", "register", "cart", "logout"];
+		vm.navItems = ["login", "register", "product", "cart", "logout"];
 		vm.loginTemplate = "app/login/login.tpl.html";
 		vm.registerTemplate = "app/register/register.tpl.html";
+		vm.productTemplate = "app/products/products.tpl.html";
 		vm.offer = function () {
 			alert("your offer");
 		};
@@ -16,6 +17,9 @@
 			} 
 			else if (param == "register") {
 				vm.loadTemplate = vm.registerTemplate;
+			}
+			else if (param == "product") {
+				vm.loadTemplate = vm.productTemplate;
 			}
 
 		};
