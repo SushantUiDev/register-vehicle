@@ -8,7 +8,7 @@
 		<label for="password">Password</label>
 		<input type="password" class="form-control" ng-model="rc.user.password" name="password" id="password" placeholder="Password">
 	</div>
-	
+
 	<div class="form-group">
 		<label for="country">Select Country</label>
 		<select class="form-control" ng-options="country.name for  country in rc.countries" ng-model="rc.user.selectedCountry" placeholder="Select Country">
@@ -20,18 +20,30 @@
 		<label for="mobile">Mobile Number</label>
 		<input type="text" class="form-control" ng-model="rc.user.mobileNo.mobile" cm-number-only maxnumbers="10" name="mobile" id="mobile" placeholder="Enter Your Number">
 	</div>
-	
-	
+
+	<div class="form-group">
+		<label for="pin">Pin Number</label>
+		<input type="text" class="form-control" ng-model="rc.user.pin" cm-number-only maxnumbers="6" name="pin" id="pin" placeholder="Enter pinNumber">
+	</div>
+
+
 	<div class="form-group">
 		<label for="dateOfBirth">Date Of Birth</label>
-		<input type="text" class="form-control" ng-model="rc.user.DobRange.dateOfBirth" name="dateOfBirth" id="dateOfBirth" placeholder="Date of Birth">
+		<input type="text" class="form-control" ng-model="rc.user.dateOfBirth" cm-date-picker mindate={{rc.dobRange.mindate}} name="dateOfBirth" id="dateOfBirth" placeholder="Date of Birth">
 	</div>
+
+	<div class="form-group">
+		<label for="dateOfReservation">Date Of Reservation</label>
+		<input type="text" class="form-control" ng-model="rc.user.dateOfReservation" cm-date-picker 
+			   mindate={{rc.doReservation.mindate}} maxdate={{rc.doReservation.maxdate}}  name="dateOfReservation" id="dateOfReservation" placeholder="Date of Birth">
+	</div>
+
 	
 	<div class="form-group">
 		<label for="textarea">Example textarea</label>
 		<textarea class="form-control" id="textarea" name="textarea" ng-model="rc.user.textarea" rows="3"></textarea>
 	</div>
-	
+
 	<div class="form-group">
 		<label for="inputFile">File input</label>
 		<input type="file" class="form-control-file" id="inputFile" name="inputFile" ng-model="rc.user.inputFile" aria-describedby="fileHelp">
@@ -63,6 +75,7 @@
       <input type="checkbox" name="term" id="term" ng-model="rc.user.term" class="form-check-input">
       Check me out
     </label>
-	</div><center></center>
+	</div>
+	<center></center>
 	<button type="submit" ng-click="rc.register()" class="btn btn-primary">Register</button></center> {{rc.user}}
 </form>

@@ -9,11 +9,12 @@
 		vm.register = function () {
             console.log(vm.user);
         }
-		vm.DobRange={
-			
+		vm.dobRange={
+			mindate:"-18Y",
 		}
-		vm.mobileNo={
-			
+		vm.doReservation={
+			mindate:"0D",
+			maxdate:"+1M"
 		}
 		commonSvc.getCountries()
 		.then(function(res){
